@@ -7,10 +7,10 @@
   </head>
   <!-- //added ng-init to initialize data when the application loads
   //normally you use controller, not ng-init -->
-  <body ng-init="numbers=[1,2,3,4]">
+  <body ng-init="meats=['pork', 'ham', 'beef']">
 <!-- //create an array with numbers -->
 <input type="text" ng-model="favMeat" placeholder="enter your fav meat"/>
-<p>{{numbers[0]}}</p>
+<p>You like {{meats[1]}} and you also like {{meats[2]}}</p>
 <!-- //it's accessing the first number in the array and outputting it -->
   </body>
 </html>
