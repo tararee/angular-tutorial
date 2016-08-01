@@ -9,9 +9,11 @@
   </head>
 
 <div ng-controller="NinjaController">
-
+  <input type='text' ng-model="search" />
+<!-- ng-model="search" makes a search bar show up!! then it will search
+through the names to show names that match the things you type into it!-->
 <ul>
-  <li ng-repeat="ninja in ninjas | orderBy: '-name' ">{{ninja.name}}</li>
+  <li ng-repeat="ninja in ninjas | orderBy: '-name' | filter: search ">{{ninja.name}}</li>
 <!-- adding the orderBy filter to sort names alphabetically
 putting a minus before the name reverses it, pretty cool.-->
 </ul>
