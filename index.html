@@ -8,12 +8,16 @@
     <script src="app/app.js"></script>
   </head>
 
-  <body ng-init="ninjas=['yoshi','crystal','ryu','shaun']">
-    <ul>
-      <li ng-repeat= "ninja in ninjas">{{ninja}}</li>
-    </ul>
-
-<input type="text" ng-model="favMeat" placeholder="enter your fav meat"/>
+<div ng-controller="NinjaController">
+<!-- Everything within this div will be controlled by the
+  NinjaController in app.js -->
+<!-- Scope is a glue between the view and the controller
+Don't have to put scope.message in here, just message, because it's implied -->
+<ul>
+  <li ng-repeat="ninja in ninjas">{{ninja}}</li>
+  <!-- we're passing this scope through as a dependency in the controller
+  it's a dependency because we are depending on it.
+ -->
 
 
   </body>
