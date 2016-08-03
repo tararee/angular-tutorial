@@ -7,17 +7,20 @@
 
     <script src="app/app.js"></script>
   </head>
-
+<body>
+  <!-- Putting ng-include in! Created a nav bar and put
+  in header.html, then ng-included it.
+  We have to use quotations,
+  and since we already used ""s we need ''s. -->
+  <header ng-include="'header.html'"></ng-include>
 <div ng-controller="NinjaController">
   <input type='text' ng-model="search" />
-<!-- ng-model="search" makes a search bar show up!! then it will search
-through the names to show names that match the things you type into it!-->
+
 <ul>
   <li ng-repeat="ninja in ninjas | orderBy: '-name' | filter: search ">
-    {{ninja.name}} - {{ninja.rate | currency}}
+
   </li>
-<!-- adding the orderBy filter to sort names alphabetically
-putting a minus before the name reverses it, pretty cool.-->
+
 </ul>
   </body>
 </html>
